@@ -1,0 +1,9 @@
+umg\edu\programacion3\proyecto\covid\CovidApiClient.class
+umg\edu\programacion3\proyecto\covid\model\Region.class
+umg\edu\programacion3\proyecto\covid\Programacion3_proyecto_covid.class
+umg\edu\programacion3\proyecto\covid\config\Scheduler.class
+umg\edu\programacion3\proyecto\covid\service\CovidApiService.class
+umg\edu\programacion3\proyecto\covid\Main.class
+umg\edu\programacion3\proyecto\covid\util\CovidApiClient.class
+umg\edu\programacion3\proyecto\covid\controller\CovidController.class
+umg\edu\programacion3\proyecto\covid\persistence\JpaUtil.class
