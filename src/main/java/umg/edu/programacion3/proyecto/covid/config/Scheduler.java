@@ -23,7 +23,8 @@ public class Scheduler {
 
         executor.schedule(() -> {
             System.out.println("[Scheduler] Starting API fetch...");
-            service.fetchAndPersistCovidData();
+            service.fetchAndPersistCovidData("GTM", "2022-04-16");
+            service.fetchAndPersistCovidData("USA", "2022-04-16"); 
         }, 15, TimeUnit.SECONDS); // <-- espera 15 segundos
     }
 }
