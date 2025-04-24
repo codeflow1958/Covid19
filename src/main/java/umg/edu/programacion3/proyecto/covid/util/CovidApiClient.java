@@ -5,11 +5,12 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import static umg.edu.programacion3.proyecto.covid.config.AppProperties.get;
 
 public class CovidApiClient {
 
-    private static final String API_KEY = "d4705489b6mshd55e24f506f29c9p19d58fjsn683c8e6a4c76";
-    private static final String API_HOST = "covid-19-statistics.p.rapidapi.com";
+    private static final String API_KEY = get("api.key");
+    private static final String API_HOST = get("api.host");
     private final HttpClient client;
 
     public CovidApiClient() {

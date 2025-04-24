@@ -9,6 +9,7 @@ import umg.edu.programacion3.proyecto.covid.service.CovidApiService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import static umg.edu.programacion3.proyecto.covid.config.AppProperties.getInt;
 
 public class Scheduler {
 
@@ -20,12 +21,14 @@ public class Scheduler {
 
     public void iniciar() {
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
+        int delaySeconds = getInt("scheduler.initial.delay", 15);
 
         executor.schedule(() -> {
             System.out.println("[Scheduler] Starting API fetch...");
             service.fetchAndPersistCovidData("GTM", "2022-04-16");
             service.fetchAndPersistCovidData("USA", "2022-04-16"); 
-        }, 15, TimeUnit.SECONDS); // <-- espera 15 segundos
+            executor.shutdown();
+        }, delaySeconds , TimeUnit.SECONDS); // <-- espera 15 segundos
     }
 }
 

@@ -10,6 +10,7 @@ umg\edu\programacion3\proyecto\covid\dto\RegionDto.class
 umg\edu\programacion3\proyecto\covid\model\Region.class
 umg\edu\programacion3\proyecto\covid\dto\RegionInfoDto.class
 umg\edu\programacion3\proyecto\covid\dto\RegionResponse.class
+umg\edu\programacion3\proyecto\covid\config\AppProperties.class
 umg\edu\programacion3\proyecto\covid\config\Scheduler.class
 umg\edu\programacion3\proyecto\covid\dto\ProvinceInfoDto.class
 umg\edu\programacion3\proyecto\covid\dto\ReportResponse.class
