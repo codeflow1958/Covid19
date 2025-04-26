@@ -51,19 +51,45 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ## 📁 Estructura del proyecto
 
-Covid19/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com/proyecto/covid/
-│ │ │ ├── model/ # Clases de entidad (JPA)
-│ │ │ ├── repository/ # Interfaces de acceso a datos (JPARepository)
-│ │ │ ├── service/ # Lógica de negocio y multithreading
-│ │ │ ├── api/ # Clases encargadas del consumo de la API externa
-│ │ │ └── MainApp.java # Clase principal que inicia el programa
-│ │ └── resources/
-│ │ └── application.properties # Configuración de la base de datos
-├── pom.xml # Archivo de configuración de Maven └── README.md # Documentación del proyecto
+```
+└── 📁main
+    └── 📁java
+        └── 📁umg
+            └── 📁edu
+                └── 📁programacion3
+                    └── 📁proyecto
+                        └── 📁covid
+                            └── 📁config
+                                └── AppProperties.java
+                                └── Scheduler.java
+                            └── 📁dto
+                                └── ProvinceDto.java
+                                └── ProvinceInfoDto.java
+                                └── ProvinceResponse.java
+                                └── RegionDto.java
+                                └── RegionInfoDto.java
+                                └── RegionResponse.java
+                                └── ReportDto.java
+                                └── ReportResponse.java
+                            └── Main.java
+                            └── 📁mapper
+                                └── DtoMapper.java
+                            └── 📁model
+                                └── Province.java
+                                └── Region.java
+                                └── Report.java
+                            └── 📁persistence
+                                └── JpaUtil.java
+                            └── 📁service
+                                └── CovidApiService.java
+                            └── 📁util
+                                └── CovidApiClient.java
+    └── 📁resources
+        └── config.properties
+        └── log4j2.xml
+        └── 📁META-INF
+            └── persistence.xml
+```
 
 ---
 
