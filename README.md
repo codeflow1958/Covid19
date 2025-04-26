@@ -103,4 +103,4 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ![log3](img_log/3.png)
 
----
+---.
