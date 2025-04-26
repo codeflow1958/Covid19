@@ -104,19 +104,3 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 ![log3](img_log/3.png)
 
 ---
-
-## ▶️ Cómo ejecutar el proyecto
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/codeflow1958/Covid19.git
-   cd Covid19
-   ```
-
-Configura los parámetros de la base de datos en
-src/main/resources/application.properties.
-
-ejecuata
-
-mvn compile
-mvn exec:java
