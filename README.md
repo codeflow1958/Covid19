@@ -95,7 +95,11 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ## logs
 
-![Texto alternativo](\img_log\1.png)
+[log 1](img_log/1.png)
+
+[log 2](img_log/2.png)
+
+[log3](img_log/3.png)
 
 ---
 
