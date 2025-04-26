@@ -1,4 +1,6 @@
-# 📊 Proyecto COVID-19 – Programación 3
+# GRUPO #3
+
+## 📊 Proyecto COVID-19 – Programación 3
 
 Este proyecto fue desarrollado como parte de la materia **Programación 3** de la carrera de informática. El objetivo principal fue aplicar conocimientos de programación orientada a objetos, uso de APIs, persistencia de datos con JPA y manejo de hilos (threads), desarrollando una aplicación capaz de consumir datos de una API pública de COVID-19 y almacenarlos de forma estructurada en una base de datos relacional.
 
@@ -93,18 +95,12 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+## logs
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/codeflow1958/Covid19.git
-   cd Covid19
-   ```
+![log 1](img_log/1.png)
 
-Configura los parámetros de la base de datos en
-src/main/resources/application.properties.
+![log 2](img_log/2.png)
 
-ejecuata
+![log3](img_log/3.png)
 
-mvn compile
-mvn exec:java
+---
