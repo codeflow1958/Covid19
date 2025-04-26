@@ -93,6 +93,12 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ---
 
+## logs
+
+![Texto alternativo](\img_log\1.png)
+
+---
+
 ## ▶️ Cómo ejecutar el proyecto
 
 1. Clona el repositorio:
