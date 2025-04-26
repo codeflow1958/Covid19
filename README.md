@@ -1,4 +1,6 @@
-# 📊 Proyecto COVID-19 – Programación 3
+# GRUPO #3
+
+## 📊 Proyecto COVID-19 – Programación 3
 
 Este proyecto fue desarrollado como parte de la materia **Programación 3** de la carrera de informática. El objetivo principal fue aplicar conocimientos de programación orientada a objetos, uso de APIs, persistencia de datos con JPA y manejo de hilos (threads), desarrollando una aplicación capaz de consumir datos de una API pública de COVID-19 y almacenarlos de forma estructurada en una base de datos relacional.
 
@@ -95,9 +97,9 @@ Este proyecto fue desarrollado como parte de la materia **Programación 3** de l
 
 ## logs
 
-## ![log 1](img_log/1.png)
+![log 1](img_log/1.png)
 
-## ![log 2](img_log/2.png)
+![log 2](img_log/2.png)
 
 ![log3](img_log/3.png)
 
