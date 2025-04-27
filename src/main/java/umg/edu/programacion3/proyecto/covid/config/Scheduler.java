@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package umg.edu.programacion3.proyecto.covid.config;
 
-import umg.edu.programacion3.proyecto.covid.service.CovidApiService;
-
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import static umg.edu.programacion3.proyecto.covid.config.AppProperties.getInt;
+import umg.edu.programacion3.proyecto.covid.service.CovidApiService;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 public class Scheduler {
 
     private final CovidApiService service;
@@ -20,15 +14,23 @@ public class Scheduler {
     }
 
     public void iniciar() {
-        ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
         int delaySeconds = getInt("scheduler.initial.delay", 15);
 
-        executor.schedule(() -> {
-            System.out.println("[Scheduler] Starting API fetch...");
-            service.fetchAndPersistCovidData("GTM", "2022-04-16");
-            service.fetchAndPersistCovidData("USA", "2022-04-16"); 
-            executor.shutdown();
-        }, delaySeconds , TimeUnit.SECONDS); // <-- espera 15 segundos
+        Thread thread = new Thread(() -> {
+            try {
+                log.info("[Hilo] en espera " + delaySeconds + " segundos...");
+                Thread.sleep(delaySeconds * 1000L); // convertir segundos a milisegundos
+
+                log.info("[Hilo] Inicio de consumo API...");
+                service.fetchAndPersistCovidData("GTM", "2022-04-16");
+                service.fetchAndPersistCovidData("USA", "2022-04-16");
+
+            } catch (InterruptedException e) {
+                log.info("❌ Error en hilo: " + e.getMessage());
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        thread.start(); // arranca el hilo
     }
 }
-
